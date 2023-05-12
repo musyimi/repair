@@ -5,8 +5,7 @@ defmodule Repair.Service do
     shop_id: nil,
     shop_name: nil,
     location: nil,
-    account: [],
-    complaint: []
+    gadgets: []
   )
 
   def new(shop_id, shop_name, location) do
@@ -15,5 +14,11 @@ defmodule Repair.Service do
       shop_name: shop_name,
       location: location
     }
+  end
+
+  def add_accounts(service, gadget) do
+    gadgets = [gadget | service.gadgets]
+
+    Map.put(service, :gadgets, gadgets)
   end
 end
