@@ -1,5 +1,6 @@
 defmodule Repair.Service do
   alias __MODULE__
+  alias Repair.Gadgets
 
   defstruct(
     shop_id: nil,
